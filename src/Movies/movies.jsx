@@ -425,7 +425,7 @@ export default function Movies() {
         <span
           className="movie-desc"
           style={{
-            width: "73.6875rem",
+            width: "50.6875rem",
             height: "7.75rem",
             flexShrink: "0",
             color: "#FFF",

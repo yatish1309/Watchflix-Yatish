@@ -1,0 +1,78 @@
+
+body{
+  margin:0;
+  background-color: #1A1A1D;
+  min-height:100vh;
+}
+
+.TrendingNow::-webkit-scrollbar{
+  display: none;
+}
+
+.card-scale:hover{
+ scale:1.2
+}
+.title{
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+.desc{
+  overflow: hidden;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 6;
+
+  -webkit-box-orient: vertical;
+}
+.movie-cat{
+
+  border-radius: 1.40694rem;
+
+  border: 1.072px solid #DA3714;
+
+  background: rgba(72, 13, 13, 0.00);
+
+  display: flex;
+
+  width: 9.65788vmax;
+
+  padding: 0.45025rem 2.92644rem;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  gap: 1.80088rem;
+
+  flex-shrink: 0;
+
+}
+
+
+
+
+.movie-cat-text{
+
+  color: #DA3714;
+
+  font-family: Montserrat;
+
+  font-size: 1.35069rem;
+
+  font-style: normal;
+
+  font-weight: 500;
+
+  line-height: normal;
+
+}
+/* @media (max-width:500px){
+     .card img{
+      height: 30vh;
+      width: 30vw;
+     }
+} */

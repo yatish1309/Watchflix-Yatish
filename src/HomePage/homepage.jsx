@@ -182,13 +182,13 @@ export default function HomePage() {
                   value={item?.vote_average / 2}
                   precision={0.1}
                   readOnly
-                  style={{ width:"6vmin",height:"2vmin" }}
+                  sx={{fontSize:"3.5vmin"}}
                 />
                 <div
                   style={{
                     display: "flex",
                     justifyContent: "space-between",
-                    marginTop: "5vh",
+                    marginTop: "1.8vh",
                     width: "30%",
                   }}
                 >

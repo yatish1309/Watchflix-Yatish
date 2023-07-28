@@ -18,7 +18,7 @@ export default function Movies() {
   let [data2, setData2] = useState({});
   let [data3, setData3] = useState({});
 
-  //   let [isPlaying, setIsPlaying] = useState(false);
+    let [isPlaying, setIsPlaying] = useState(false);
   let [isDisplay, setIsDisplay] = useState("none");
   let navigate = useNavigate();
 
@@ -84,6 +84,7 @@ export default function Movies() {
 
   function handleClose() {
     setIsDisplay("none");
+    setIsPlaying(false);
   }
 
   function handleMovieClick(id){
@@ -120,17 +121,17 @@ export default function Movies() {
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
-          width: "100vmax",
+          width: "170vmin",
         }}
       >
         <img
           src={imgLink}
           alt={filterData?.[0]?.title}
           style={{
-            width: "88.79vmax",
-            height: "85.674vmin",
+            width: "140.79vmin",
+            height:"80vmin",
             // width:"83.907rem",
-            height: "41.766rem",
+           
             objectFit: "cover",
             borderRadius: "0.9375rem",
             opacity: "50%",
@@ -141,8 +142,9 @@ export default function Movies() {
             display: "flex",
             justifyContent: "space-around",
             alignItems: "center",
-            width: "108.79vmax",
+            width: "108.79vmin",
             position: "absolute",
+            gap:"1.2em",
             bottom: "-5rem",
           }}
         >
@@ -152,7 +154,7 @@ export default function Movies() {
               color: "#FFF",
               marginLeft:"5vw",
               fontFamily: "Oswald",
-              fontSize: "5rem",
+              fontSize: "5vmax",
               fontStyle: "normal",
               fontWeight: "500",
             }}
@@ -203,7 +205,7 @@ export default function Movies() {
                 style={{
                   color: "#FFF",
                   fontFamily: "Overpass",
-                  fontSize: "0.9375rem",
+                  fontSize: "1.5vmin",
                   fontStyle: "normal",
                   fontWeight: "600",
                 }}
@@ -247,7 +249,7 @@ export default function Movies() {
                 style={{
                   color: " #FFF",
                   fontFamily: "Overpass",
-                  fontSize: "0.9375rem",
+                  fontSize: "1.5vmin",
                   fontStyle: "normal",
                   fontWeight: "600",
                 }}
@@ -258,8 +260,11 @@ export default function Movies() {
             <div
               onClick={() => {
                 setIsDisplay("block");
+                setIsPlaying(true);
               }}
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer" ,
+                  
+            }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -267,6 +272,10 @@ export default function Movies() {
                 height="151"
                 viewBox="0 0 140 151"
                 fill="none"
+                style={{
+                  width:"10vw",
+                  height:"15vh"
+                }}
               >
                 <g clip-path="url(#clip0_2_1274)">
                   <path
@@ -305,6 +314,7 @@ export default function Movies() {
           //   marginTop: "10vmin",
           gap: "3vmax",
           marginLeft: "13vmax",
+          marginTop:"10vmin"
         }}
       >
         <svg
@@ -346,7 +356,7 @@ export default function Movies() {
           style={{
             color: "#727171",
             fontFamily: "Poppins",
-            fontSize: "2rem",
+            fontSize: "7vmin",
             fontStyle: "normal",
             fontWeight: "400",
           }}
@@ -358,7 +368,7 @@ export default function Movies() {
           style={{
             color: "#727171",
             fontFamily: "Poppins",
-            fontSize: "2rem",
+            fontSize: "7vmin",
             fontStyle: "normal",
             fontWeight: "400",
           }}
@@ -370,7 +380,7 @@ export default function Movies() {
           style={{
             color: "#727171",
             fontFamily: "Poppins",
-            fontSize: "2rem",
+            fontSize: "7vmin",
             fontStyle: "normal",
             fontWeight: "400",
           }}
@@ -386,7 +396,7 @@ export default function Movies() {
           justifyContent: "flex-start",
           alignItems: "center",
           position: "relative",
-          width: "100vmax",
+          width: "100vmin",
           //   marginTop: "10vmin",
           gap: "3vmax",
           marginLeft: "13vmax",
@@ -420,17 +430,17 @@ export default function Movies() {
         </div>
       </div>
       <div
-        style={{ display: "flex", marginLeft: "7vmax", width: "77.976vmax" }}
+        style={{ display: "flex", marginLeft: "12vmax", width:"70vmin" }}
       >
         <span
           className="movie-desc"
           style={{
-            width: "50.6875rem",
-            height: "7.75rem",
+            width: "70vmin",
+            
             flexShrink: "0",
             color: "#FFF",
             fontFamily: "Overpass",
-            fontSize: "1.5em",
+            fontSize: "2.5vmin",
             fontStyle: "normal",
             fontWeight: "400",
             lineHeight: "normal",
@@ -460,7 +470,7 @@ export default function Movies() {
         >
           X
         </button>
-        <ReactPlayer
+        {isPlaying&&<ReactPlayer
           url={movieURL}
           playing={true}
           width={"50vw"}
@@ -475,7 +485,7 @@ export default function Movies() {
           }
           muted
           controls={true}
-        />
+        />}
       </div>
     
       <div
@@ -500,7 +510,7 @@ export default function Movies() {
           style={{
             display: "flex",
             gap: "2em",
-            maxWidth: "90%",
+            width: "90%",
             overflow: "scroll",
           }}
         >
@@ -509,7 +519,7 @@ export default function Movies() {
               <Card
                 className="card-scale"
                 style={{
-                  width: "10vw",
+                  width: "13vw",
                   height: "25vmin",
                   flexShrink: "0",
                 }}
@@ -518,7 +528,7 @@ export default function Movies() {
                                  onClick={()=>{handleMovieClick(item?.id)}}
 
                   style={{
-                    width: "10vw",
+                    width: "13vw",
                     height: "25vmin",
                     cursor: "pointer",
                     objectFit: "cover",

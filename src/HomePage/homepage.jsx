@@ -17,7 +17,7 @@ export default function HomePage() {
   let [data2, setData2] = useState({});
   let [data3, setData3] = useState({});
   
-//   let [isPlaying, setIsPlaying] = useState(false);
+  let [isPlaying, setIsPlaying] = useState(false);
   let [isDisplay, setIsDisplay] = useState("none");
   let navigate=useNavigate();
   
@@ -85,13 +85,13 @@ export default function HomePage() {
 
   function handleWatchNow() {
     setIsDisplay("block");
-    // setIsPlaying(true);
+    setIsPlaying(true);
     // setIsOpacity(0.3);
   }
 
   function handleClose() {
     setIsDisplay("none");
-    // setIsPlaying(false);
+    setIsPlaying(false);
     // setIsOpacity(1);
   }
 
@@ -523,9 +523,9 @@ export default function HomePage() {
         <button style={{ cursor: "pointer" , position:"absolute",right:"0",zIndex:"2" }} onClick={handleClose}>
           X
         </button>
-        <ReactPlayer url={movieURL}  playing={true} width={"50vw"} height={"50vh"} light={<div style={{width:"50vw",height:"50vh"}}>
+        {isPlaying&&<ReactPlayer url={movieURL}   width={"50vw"} height={"50vh"} light={<div style={{width:"50vw",height:"50vh"}}>
             <img src="https://dx35vtwkllhj9.cloudfront.net/paramountpictures/mission-impossible-7/images/regions/us/header.jpg" style={{ width:"50vw",height:"50vh",objectFit:"cover"}}/>
-            </div>} muted controls={true} />
+            </div>} controls={true} playing={isPlaying} />}
         
       </div>
     </div>

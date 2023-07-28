@@ -31,48 +31,47 @@ body{
 .movie-cat{
 
   border-radius: 1.40694rem;
-
   border: 1.072px solid #DA3714;
-
   background: rgba(72, 13, 13, 0.00);
-
   display: flex;
-
   width: 9.65788vmax;
-
-  padding: 0.45025rem 2.92644rem;
-
+  padding: 0.45025vmin 2.92644vmin;
   align-items: flex-start;
-
   justify-content: center;
-
-  gap: 1.80088rem;
-
+  gap: 1.80088vmin;
   flex-shrink: 0;
 
 }
+.content-links{
+  
+    display:flex ;
+    gap:1.5em;
+  
+}
+.HamBurger{
+  display: none;
+} 
+@media (max-width:800px){
+  .content-links{
+   display:none;
+  }
 
+  .HamBurger{
+   display: block;
+  }
+}
 
 
 
 .movie-cat-text{
-
   color: #DA3714;
-
-  font-family: Montserrat;
-
-  font-size: 1.35069rem;
-
+  font-family: "Montserrat";
+  font-size: 2.35069vmin;
   font-style: normal;
-
   font-weight: 500;
-
   line-height: normal;
 
 }
-/* @media (max-width:500px){
-     .card img{
-      height: 30vh;
-      width: 30vw;
-     }
-} */
+
+
+

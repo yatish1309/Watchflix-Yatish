@@ -1,8 +1,28 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 About Me
+I'm a front-end developer...
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Links
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://in.linkedin.com/in/rammandala)
+
+
+
+## Screenshots
+
+HomePage
+
+![App Screenshot](https://github.com/yatish1309/Watchflix-Yatish/blob/main/WatchFlixHome.png?raw=true)
+
+Categories Page 
+
+![App Screenshot](https://github.com/yatish1309/Watchflix-Yatish/blob/main/WatchFlixCategories.png?raw=true)
+
+Movies Page
+
+![App Screenshot](https://github.com/yatish1309/Watchflix-Yatish/blob/main/WatchFlixMoviePage.png?raw=true)
+# DashBoard
+
+DashBoard - Mandala Yatish Ram Kumar
+
